@@ -1,0 +1,13 @@
+[Unit]
+ Description=TBot
+ After=network.target
+
+[Service]
+ Type=simple
+ User=baden
+ WorkingDirectory=/home/baden/fx-telebot/
+ ExecStart=/home/baden/fx-telebot/.venv/bin/python3 /home/baden/fx-telebot/bot.py
+ Restart=always
+
+[Install]
+ WantedBy=multi-user.target
